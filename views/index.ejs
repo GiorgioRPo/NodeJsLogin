@@ -1,0 +1,25 @@
+<div class="author">
+    <h1 class="author__heading">HEADING</h1>
+    <p class="author__body">BODY TEXT BODY TEXT BODY TEXT</p>
+
+
+    <section class="articles">
+        <h2 class="articles__heading">ARTICLE HEADING</h2>
+
+        <ul class="article-ui">
+
+            <% data.forEach(post => { %>
+
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span><%= post.title %></span>
+                    <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+                </a>
+            </li>
+
+            <% }) %>
+        </ul>
+
+        <a href="#" class="pagination">&lt; View Previous</a>
+    </section>
+</div>
